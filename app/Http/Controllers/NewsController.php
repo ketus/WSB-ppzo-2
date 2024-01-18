@@ -11,11 +11,13 @@ class NewsController extends Controller
 {
   public function index(Request $request)
   {
-    $query = $request->input('q', '');
+    $query = $request->input('q', 'everything');
+    $domains = $request->input('domains', '');
     $apiKey = env('NEWS_API_KEY');
 
     $response = Http::get('https://newsapi.org/v2/everything', [
       'q' => $query,
+      'domains' => $domains,
       'apiKey' => $apiKey
     ]);
 

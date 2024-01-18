@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Laravel</title>
+  <title>ERROR</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.bunny.net">
@@ -57,24 +57,9 @@
 
 <body class="antialiased">
   <div class="container">
-    <h1>News Search</h1>
-    <form action="{{ url('/news') }}" method="GET">
-      <input type="text" name="q" placeholder="Search news..." value="{{ request('q') }}">
-      <input type="text" name="domains" placeholder="for example: yahoo.com" value="{{ request('domains') }}">
-      <button type="submit">Search</button>
-    </form>
+    <h1>error during search. Try again.</h1>
+      <a href="/news">NEWS API</a>
     <BR>
-    
-
-    @foreach ($articles as $article)
-    <div class="article">
-      <h2>{{ $article->getTitle() }}</h2>
-      <p>{{ $article->getDescription() }}</p>
-      <a href="{{ $article->getUrl() }}">Article link</a>
-      <p>Author: {{ $article->getAuthor() }}</p>
-    </div>
-    @endforeach
-  </div>
 </body>
 
 </html>

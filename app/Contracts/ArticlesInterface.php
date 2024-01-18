@@ -5,5 +5,5 @@ use App\Article;
 
 interface ArticlesInterface
 {
-  public function add(Article $article);
+  public function add(ArticleInterface $article);
 }
