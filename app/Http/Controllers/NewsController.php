@@ -24,7 +24,12 @@ class NewsController extends Controller
       $articles = new Articles();
 
       foreach ($news['articles'] as $newsItem) {
-        $article = new Article($newsItem['title'], $newsItem['description']);
+        $article = new Article(
+          $newsItem['title'], 
+          $newsItem['description'],
+          $newsItem['author'],
+          $newsItem['url']
+        );
         $articles->add($article);
       }
       $articles = $articles->all();
